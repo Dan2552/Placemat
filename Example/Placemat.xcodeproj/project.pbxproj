@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09A6D07BFCE20B7BACACFAA3 /* Pods_Placemat_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC35E6A9294CDDFF36B2071D /* Pods_Placemat_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* StringConvertersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* StringConvertersTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,7 +17,7 @@
 		375DCB18F0EBAF1C4F3BC610 /* Pods-Placemat_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placemat_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = Placemat_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* StringConvertersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConvertersTests.swift; sourceTree = "<group>"; };
 		ADBF473B20519778984FB628 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BC35E6A9294CDDFF36B2071D /* Pods_Placemat_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Placemat_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0FFFE009685FA71562C64A /* Placemat.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Placemat.podspec; path = ../Placemat.podspec; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* StringConvertersTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -217,7 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* StringConvertersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

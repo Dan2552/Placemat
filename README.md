@@ -1,6 +1,6 @@
 # Placemat
 
-[![CI Status](http://img.shields.io/travis/Daniel Green/Placemat.svg?style=flat)](https://travis-ci.org/Daniel Green/Placemat)
+[![CI Status](http://img.shields.io/travis/Dan2552/Placemat.svg?style=flat)](https://travis-ci.org/Daniel Green/Placemat)
 [![Version](https://img.shields.io/cocoapods/v/Placemat.svg?style=flat)](http://cocoapods.org/pods/Placemat)
 [![License](https://img.shields.io/cocoapods/l/Placemat.svg?style=flat)](http://cocoapods.org/pods/Placemat)
 [![Platform](https://img.shields.io/cocoapods/p/Placemat.svg?style=flat)](http://cocoapods.org/pods/Placemat)
