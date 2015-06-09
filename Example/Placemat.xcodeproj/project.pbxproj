@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09A6D07BFCE20B7BACACFAA3 /* Pods_Placemat_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC35E6A9294CDDFF36B2071D /* Pods_Placemat_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		377511EB1B27645900003C6C /* DictionarySupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377511EA1B27645900003C6C /* DictionarySupportTests.swift */; };
 		607FACEC1AFB9204008FA782 /* StringConvertersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* StringConvertersTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -15,7 +16,8 @@
 		093CB2AF5975D7798AED89B4 /* Pods-Placemat_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placemat_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		268CE925920F28AC70CCD5C1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		375DCB18F0EBAF1C4F3BC610 /* Pods-Placemat_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placemat_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = Placemat_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		377511EA1B27645900003C6C /* DictionarySupportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionarySupportTests.swift; sourceTree = "<group>"; };
+		607FACE51AFB9204008FA782 /* Placemat_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Placemat_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* StringConvertersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConvertersTests.swift; sourceTree = "<group>"; };
 		ADBF473B20519778984FB628 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACE51AFB9204008FA782 /* Tests.xctest */,
+				607FACE51AFB9204008FA782 /* Placemat_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACEB1AFB9204008FA782 /* StringConvertersTests.swift */,
+				377511EA1B27645900003C6C /* DictionarySupportTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -118,7 +121,7 @@
 			);
 			name = Placemat_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* Placemat_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* StringConvertersTests.swift in Sources */,
+				377511EB1B27645900003C6C /* DictionarySupportTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
