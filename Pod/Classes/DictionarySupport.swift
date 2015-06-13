@@ -15,7 +15,7 @@ public extension NSDictionary {
         let newDict = NSMutableDictionary()
         for (keyObject, value) in self {
             if let key = keyObject as? String {
-                if contains(keys, key) {
+                if keys.contains(key) {
                     newDict[key] = value
                 }
             }
@@ -27,7 +27,7 @@ public extension NSDictionary {
     //TODO: test this
     func stringKeys() -> [String] {
         var keys = [String]()
-        for (keyObject, value) in self {
+        for (keyObject, _) in self {
             if let key = keyObject as? String {
                 keys.append(key)
             }
