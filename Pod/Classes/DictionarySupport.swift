@@ -23,7 +23,6 @@ public extension NSDictionary {
         return newDict
     }
     
-    //TODO: test this
     func stringKeys() -> [String] {
         var keys = [String]()
         for (keyObject, _) in self {
