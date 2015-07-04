@@ -10,7 +10,7 @@ import UIKit
 
 public extension String {
     func firstCharacterUpperCase() -> String {
-        if count(self) > 0 {
+        if self.characters.count > 0 {
             let first = self.startIndex
             let rest = advance(first,1)..<self.endIndex
             return self[first...first].uppercaseString + self[rest]
@@ -20,7 +20,7 @@ public extension String {
     }
     
     func firstCharacterLowerCase() -> String {
-        if count(self) > 0 {
+        if self.characters.count > 0 {
             let first = self.startIndex
             let rest = advance(first,1)..<self.endIndex
             return self[first...first].lowercaseString + self[rest]
@@ -63,7 +63,7 @@ public extension String {
     }
     
     func underscoreCase() -> String {
-        var output = NSMutableString()
+        let output = NSMutableString()
         let uppercase = NSCharacterSet.uppercaseLetterCharacterSet()
         var previousCharacterWasUppercase = false
         var currentCharacterIsUppercase = false
@@ -71,7 +71,7 @@ public extension String {
         var currentChar: Character?
         var previousChar: Character?
         
-        for (index, character) in enumerate(self) {
+        for (index, character) in self.characters.enumerate() {
             previousChar = currentChar
             currentChar = character
             

@@ -5,6 +5,6 @@ use_frameworks!
 target 'Placemat_Tests', :exclusive => true do
   pod "Placemat", :path => "../"
 
-  pod 'Quick'
-  pod 'Nimble'
+  pod 'Quick', '~> 0.4'
+  pod 'Nimble', '2.0.0-rc.1'
 end
