@@ -10,7 +10,6 @@ import Foundation
 
 public extension NSDictionary {
 
-    //TODO: test this
     func only(keys: [String]) -> NSDictionary {
         let newDict = NSMutableDictionary()
         for (keyObject, value) in self {
