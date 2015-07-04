@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "Placemat"
   s.version          = "0.1.0"
-  s.summary          = "Dependency of Luncheon. Support library. String conversions between camel case and snake case and pluralization."
+  s.summary          = "Dependency of Luncheon. Support library. Provides helper methods for String conversions & pluralization and NSDictionary."
   s.homepage         = "https://github.com/Dan2552/Placemat"
   s.license          = 'MIT'
   s.author           = { "Daniel Green" => "dan2552@gmail.com" }
