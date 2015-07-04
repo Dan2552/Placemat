@@ -5,11 +5,11 @@
 [![License](https://img.shields.io/cocoapods/l/Placemat.svg?style=flat)](http://cocoapods.org/pods/Placemat)
 [![Platform](https://img.shields.io/cocoapods/p/Placemat.svg?style=flat)](http://cocoapods.org/pods/Placemat)
 
+*Please note: Due to protocol extensions, Luncheon (and therefore Placemat) requires Swift 2.0 (and Xcode 7)*
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
