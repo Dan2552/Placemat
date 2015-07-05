@@ -125,7 +125,7 @@ class StringConvertersSpec: QuickSpec {
         
         describe("-underscoreCase") {
             
-            it("returns the string in camel_case form") {
+            it("returns the string in lowercase form") {
                 let values = [
                     "banana",
                     "a",

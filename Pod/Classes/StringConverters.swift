@@ -68,13 +68,7 @@ public extension String {
         var previousCharacterWasUppercase = false
         var currentCharacterIsUppercase = false
         
-        var currentChar: Character?
-        var previousChar: Character?
-        
         for (index, character) in self.characters.enumerate() {
-            previousChar = currentChar
-            currentChar = character
-            
             let units = [unichar](String(character).utf16)
             
             previousCharacterWasUppercase = currentCharacterIsUppercase
