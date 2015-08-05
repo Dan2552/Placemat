@@ -7,6 +7,13 @@
 //
 
 import UIKit
+private let acronyms = [
+    "URL",
+    "HTTP",
+    "SSL",
+    "HTML",
+    "API"
+]
 
 public extension String {
     func firstCharacterUpperCase() -> String {
@@ -89,4 +96,62 @@ public extension String {
         }
         return String(output)
     }
+    
+    // Deletes leading underscores, if any.
+    // Removes a "_id" suffix if present.
+    // Replaces underscores with spaces, if any.
+    // Downcases all words except acronyms.
+    // Capitalizes the first word.
+    // TODO: Refactor the hell out of this with Regex
+    public func humanize(capitalize: Bool = true) -> String {
+        var human = self
+        if human.hasPrefix("_") {
+            human = (human as NSString).stringByReplacingCharactersInRange(NSMakeRange(0, 1), withString: "")
+        }
+        human = human.stringByReplacingOccurrencesOfString("_", withString: " ")
+        human = human.lowercaseString
+        let words = human.componentsSeparatedByString(" ")
+
+        for (index, var word) in words.enumerate() {
+            let upper = word.uppercaseString
+            if acronyms.contains(upper) {
+                word = upper
+            }
+            
+            if index == 0 {
+                human = word
+            } else {
+                human += " \(word)"
+            }
+        }
+        
+        if capitalize {
+            human = human.firstCharacterUpperCase()
+        }
+        return human
+    }
+    
+    // TODO: Refactor the hell out of this with Regex
+    public func titleize() -> String {
+        var string = underscoreCase().humanize().capitalizedString
+        
+        let words = string.componentsSeparatedByString(" ")
+        
+        for (index, var word) in words.enumerate() {
+            let upper = word.uppercaseString
+            if acronyms.contains(upper) {
+                word = upper
+            }
+            
+            if index == 0 {
+                string = word
+            } else {
+                string += " \(word)"
+            }
+        }
+        
+        return string
+    }
+    
+    
 }
