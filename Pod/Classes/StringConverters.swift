@@ -19,7 +19,7 @@ public extension String {
     func firstCharacterUpperCase() -> String {
         if self.characters.count > 0 {
             let first = self.startIndex
-            let rest = advance(first,1)..<self.endIndex
+            let rest = first.advancedBy(1)..<self.endIndex
             return self[first...first].uppercaseString + self[rest]
         } else {
             return self
@@ -29,7 +29,7 @@ public extension String {
     func firstCharacterLowerCase() -> String {
         if self.characters.count > 0 {
             let first = self.startIndex
-            let rest = advance(first,1)..<self.endIndex
+            let rest = first.advancedBy(1)..<self.endIndex
             return self[first...first].lowercaseString + self[rest]
         } else {
             return self
@@ -57,13 +57,13 @@ public extension String {
         }
         var plural = "\(self)s"
         if plural.hasSuffix("eys") { // "moneys" -> "monies"
-            let range = advance(plural.endIndex, -3)..<advance(plural.endIndex, 0)
+            let range = plural.endIndex.advancedBy(-3)..<plural.endIndex.advancedBy(0)
             plural = plural.stringByReplacingCharactersInRange(range, withString: "ies")
         } else if plural.hasSuffix("ys") { // "categorys" -> "categories"
-            let range = advance(plural.endIndex, -2)..<advance(plural.endIndex, 0)
+            let range = plural.endIndex.advancedBy(-2)..<plural.endIndex.advancedBy(0)
             plural = plural.stringByReplacingCharactersInRange(range, withString: "ies")
         } else if plural.hasSuffix("sss") { // "address" -> "addresses"
-            let range = advance(plural.endIndex, -3)..<advance(plural.endIndex, 0)
+            let range = plural.endIndex.advancedBy(-3)..<plural.endIndex.advancedBy(0)
             plural = plural.stringByReplacingCharactersInRange(range, withString: "sses")
         }
         return plural
