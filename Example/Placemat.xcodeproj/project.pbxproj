@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09A6D07BFCE20B7BACACFAA3 /* Pods_Placemat_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC35E6A9294CDDFF36B2071D /* Pods_Placemat_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		140A2A256E7E87018569ADEB /* Pods_Placemat_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A938457CCD5DA26B778B88C4 /* Pods_Placemat_Tests.framework */; };
 		377511EB1B27645900003C6C /* DictionarySupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377511EA1B27645900003C6C /* DictionarySupportTests.swift */; };
 		607FACEC1AFB9204008FA782 /* StringConvertersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* StringConvertersTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		093CB2AF5975D7798AED89B4 /* Pods-Placemat_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placemat_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		268CE925920F28AC70CCD5C1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		375DCB18F0EBAF1C4F3BC610 /* Pods-Placemat_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placemat_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2F5FFBA9709D79690371FDA4 /* Pods-Placemat_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placemat_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		377511EA1B27645900003C6C /* DictionarySupportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionarySupportTests.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Placemat_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Placemat_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* StringConvertersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConvertersTests.swift; sourceTree = "<group>"; };
+		A938457CCD5DA26B778B88C4 /* Pods_Placemat_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Placemat_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBF473B20519778984FB628 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		BC35E6A9294CDDFF36B2071D /* Pods_Placemat_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Placemat_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2813473392895ADE0E12C59 /* Pods-Placemat_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placemat_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF0FFFE009685FA71562C64A /* Placemat.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Placemat.podspec; path = ../Placemat.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -30,19 +30,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09A6D07BFCE20B7BACACFAA3 /* Pods_Placemat_Tests.framework in Frameworks */,
+				140A2A256E7E87018569ADEB /* Pods_Placemat_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		57A55CA21F0A483D6CA5A53E /* Frameworks */ = {
+		430B68621EAE34A4FC0C54BE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BC35E6A9294CDDFF36B2071D /* Pods_Placemat_Tests.framework */,
+				D2813473392895ADE0E12C59 /* Pods-Placemat_Tests.debug.xcconfig */,
+				2F5FFBA9709D79690371FDA4 /* Pods-Placemat_Tests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -51,8 +52,8 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				B705575E6D94E3630B4E89C9 /* Pods */,
-				57A55CA21F0A483D6CA5A53E /* Frameworks */,
+				430B68621EAE34A4FC0C54BE /* Pods */,
+				9CC4B118CE9C0EB2B80DD216 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,13 +93,12 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		B705575E6D94E3630B4E89C9 /* Pods */ = {
+		9CC4B118CE9C0EB2B80DD216 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				093CB2AF5975D7798AED89B4 /* Pods-Placemat_Tests.debug.xcconfig */,
-				375DCB18F0EBAF1C4F3BC610 /* Pods-Placemat_Tests.release.xcconfig */,
+				A938457CCD5DA26B778B88C4 /* Pods_Placemat_Tests.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,12 +108,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Placemat_Tests" */;
 			buildPhases = (
-				BEA1DC0DA393A15B8F73355C /* Check Pods Manifest.lock */,
+				A13058F90AC1E62484D0BAA7 /* 📦 Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				E92C8A4A23B0CE77DBD81DAE /* Embed Pods Frameworks */,
-				B3FFCC8F031F4AB9FE691B10 /* Copy Pods Resources */,
+				0500E156674E73F03BF7CB84 /* 📦 Embed Pods Frameworks */,
+				D77ABEDADDA5F0D1D720AEFE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,29 +169,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B3FFCC8F031F4AB9FE691B10 /* Copy Pods Resources */ = {
+		0500E156674E73F03BF7CB84 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BEA1DC0DA393A15B8F73355C /* Check Pods Manifest.lock */ = {
+		A13058F90AC1E62484D0BAA7 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,19 +199,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E92C8A4A23B0CE77DBD81DAE /* Embed Pods Frameworks */ = {
+		D77ABEDADDA5F0D1D720AEFE /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -313,7 +313,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 093CB2AF5975D7798AED89B4 /* Pods-Placemat_Tests.debug.xcconfig */;
+			baseConfigurationReference = D2813473392895ADE0E12C59 /* Pods-Placemat_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -333,7 +333,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 375DCB18F0EBAF1C4F3BC610 /* Pods-Placemat_Tests.release.xcconfig */;
+			baseConfigurationReference = 2F5FFBA9709D79690371FDA4 /* Pods-Placemat_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
