@@ -10,8 +10,16 @@ import Foundation
 
 public extension UIViewController {
     var isModal: Bool {
-        return self.presentingViewController?.presentedViewController == self
-            || (self.navigationController != nil && self.navigationController?.presentingViewController?.presentedViewController == self.navigationController)
-            || self.tabBarController?.presentingViewController is UITabBarController
+        let presentedItself = presentingViewController?.presentedViewController == self
+
+        let inNavigationController = navigationController != nil
+        let navigationPresentedItself = navigationController?.presentingViewController?.presentedViewController == self.navigationController
+        let firstInNavigationController = navigationController?.viewControllers.first == self
+
+        let tabBar = tabBarController?.presentingViewController is UITabBarController
+
+        return presentedItself
+            || (inNavigationController && navigationPresentedItself && firstInNavigationController)
+            || tabBar
     }
 }
