@@ -16,7 +16,7 @@ class DictionarySupportSpec: QuickSpec {
         describe("-only") {
             let onlyDictionary = dictionary.only(["testingTwo", "testing_three"])
             
-            it("filters to only include the keys provided"){
+            it("filters to only include the keys provided") {
                 expect(onlyDictionary.count).to(equal(2))
                 expect(onlyDictionary["testingTwo"]).toNot(beNil())
                 expect(onlyDictionary["testing_three"]).toNot(beNil())

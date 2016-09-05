@@ -16,6 +16,10 @@ private let acronyms = [
 ]
 
 public extension String {
+    static func nameFor(any: Any) -> String {
+        return (any is Any.Type) ? "\(any)" : "\(any.dynamicType)"
+    }
+    
     func firstCharacterUpperCase() -> String {
         if self.characters.count > 0 {
             let first = self.startIndex

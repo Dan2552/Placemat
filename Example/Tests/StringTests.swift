@@ -4,6 +4,20 @@ import Placemat
 
 class StringConvertersSpec: QuickSpec {
     override func spec() {
+        describe("+instanceClassName:") {
+            it("returns the name of the class for a given instance or class") {
+                expect(String.nameFor(ThisIsATest())).to(equal("ThisIsATest"))
+                expect(String.nameFor(AnotherTest())).to(equal("AnotherTest"))
+                expect(String.nameFor(ThisIsATest)).to(equal("ThisIsATest"))
+                expect(String.nameFor(AnotherTest)).to(equal("AnotherTest"))
+            }
+        }
+        
+        describe("+className:") {
+            it("returns the name of the given class") {
+            }
+        }
+        
         describe("-firstCharacterUpperCase") {
 
             it("makes the first character uppercase") {

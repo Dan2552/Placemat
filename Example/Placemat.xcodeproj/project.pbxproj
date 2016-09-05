@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		140A2A256E7E87018569ADEB /* Pods_Placemat_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A938457CCD5DA26B778B88C4 /* Pods_Placemat_Tests.framework */; };
-		377511EB1B27645900003C6C /* DictionarySupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377511EA1B27645900003C6C /* DictionarySupportTests.swift */; };
-		607FACEC1AFB9204008FA782 /* StringConvertersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* StringConvertersTests.swift */; };
+		3767A93A1D7E19B8000AF8AE /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767A9391D7E19B8000AF8AE /* Support.swift */; };
+		377511EB1B27645900003C6C /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377511EA1B27645900003C6C /* DictionaryTests.swift */; };
+		607FACEC1AFB9204008FA782 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* StringTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		268CE925920F28AC70CCD5C1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2F5FFBA9709D79690371FDA4 /* Pods-Placemat_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placemat_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		377511EA1B27645900003C6C /* DictionarySupportTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionarySupportTests.swift; sourceTree = "<group>"; };
+		3767A9391D7E19B8000AF8AE /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		377511EA1B27645900003C6C /* DictionaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryTests.swift; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Placemat_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Placemat_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* StringConvertersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConvertersTests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		A938457CCD5DA26B778B88C4 /* Pods_Placemat_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Placemat_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBF473B20519778984FB628 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D2813473392895ADE0E12C59 /* Pods-Placemat_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Placemat_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Placemat_Tests/Pods-Placemat_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,9 +70,10 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* StringConvertersTests.swift */,
-				377511EA1B27645900003C6C /* DictionarySupportTests.swift */,
+				607FACEB1AFB9204008FA782 /* StringTests.swift */,
+				377511EA1B27645900003C6C /* DictionaryTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				3767A9391D7E19B8000AF8AE /* Support.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -221,8 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* StringConvertersTests.swift in Sources */,
-				377511EB1B27645900003C6C /* DictionarySupportTests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* StringTests.swift in Sources */,
+				377511EB1B27645900003C6C /* DictionaryTests.swift in Sources */,
+				3767A93A1D7E19B8000AF8AE /* Support.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
