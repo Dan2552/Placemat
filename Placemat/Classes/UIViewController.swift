@@ -2,7 +2,7 @@
 //  UIViewController.swift
 //  Pods
 //
-//  Created by Daniel Green on 23/07/2015.
+//  Created by Daniel Inkpen on 23/07/2015.
 //
 //
 

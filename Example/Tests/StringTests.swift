@@ -6,10 +6,10 @@ class StringConvertersSpec: QuickSpec {
     override func spec() {
         describe("+instanceClassName:") {
             it("returns the name of the class for a given instance or class") {
-                expect(String.nameFor(ThisIsATest())).to(equal("ThisIsATest"))
-                expect(String.nameFor(AnotherTest())).to(equal("AnotherTest"))
-                expect(String.nameFor(ThisIsATest)).to(equal("ThisIsATest"))
-                expect(String.nameFor(AnotherTest)).to(equal("AnotherTest"))
+                expect(String.nameFor(object: ThisIsATest())).to(equal("ThisIsATest"))
+                expect(String.nameFor(object: AnotherTest())).to(equal("AnotherTest"))
+                expect(String.nameFor(object: ThisIsATest.self)).to(equal("ThisIsATest"))
+                expect(String.nameFor(object: AnotherTest.self)).to(equal("AnotherTest"))
             }
         }
         
@@ -39,7 +39,7 @@ class StringConvertersSpec: QuickSpec {
                     "HelloWorld"
                 ]
                 
-                let results = values.map { s in return s.firstCharacterUpperCase() }
+                let results = values.map { s in return s.changingCaseOf(firstCharacter: .upper) }
 
                 expect(expected_results) == results
             }
@@ -64,7 +64,7 @@ class StringConvertersSpec: QuickSpec {
                     "helloWorld"
                 ]
                 
-                let results = values.map { s in return s.firstCharacterLowerCase() }
+                let results = values.map { s in return s.changingCaseOf(firstCharacter: .lower) }
                 
                 expect(expected_results) == results
             }
@@ -85,7 +85,7 @@ class StringConvertersSpec: QuickSpec {
                     "AlreadyCamelCase"
                 ]
                 
-                let results = values.map { s in return s.camelCase() }
+                let results = values.map { s in return s.camelCased() }
                 
                 expect(expected_results) == results
             }
@@ -106,7 +106,7 @@ class StringConvertersSpec: QuickSpec {
                     "alreadyCamelCase"
                 ]
                 
-                let results = values.map { s in return s.camelCaseLower() }
+                let results = values.map { s in return s.camelCased(firstCharacterCase: .lower) }
                 
                 expect(expected_results) == results
             }
@@ -156,7 +156,7 @@ class StringConvertersSpec: QuickSpec {
                     "hello_world"
                 ]
                 
-                let results = values.map { s in return s.underscoreCase() }
+                let results = values.map { s in return s.underscoreCased() }
                 
                 expect(expected_results) == results
             }

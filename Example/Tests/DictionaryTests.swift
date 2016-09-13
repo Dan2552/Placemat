@@ -1,5 +1,3 @@
-
-
 import Quick
 import Nimble
 import Placemat
@@ -14,7 +12,7 @@ class DictionarySupportSpec: QuickSpec {
         ] as NSDictionary
         
         describe("-only") {
-            let onlyDictionary = dictionary.only(["testingTwo", "testing_three"])
+            let onlyDictionary = dictionary.only(keys: ["testingTwo", "testing_three"])
             
             it("filters to only include the keys provided") {
                 expect(onlyDictionary.count).to(equal(2))

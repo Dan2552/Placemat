@@ -2,7 +2,7 @@
 //  DictionaryFilter.swift
 //  Pods
 //
-//  Created by Daniel Green on 09/06/2015.
+//  Created by Daniel Inkpen on 09/06/2015.
 //
 //
 
@@ -38,7 +38,7 @@ public extension NSDictionary {
 
         let selfCasted = self as! [String: AnyObject]
         for (key, value) in selfCasted {
-            attributesUnderscore[key.underscoreCase()] = value
+            attributesUnderscore[key.underscoreCased()] = value
         }
 
         return attributesUnderscore
