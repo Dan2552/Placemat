@@ -22,4 +22,27 @@ public extension UIViewController {
             || (inNavigationController && navigationPresentedItself && firstInNavigationController)
             || tabBar
     }
+    
+    public func setupTableView(tableView: UITableView? = nil, style: UITableViewStyle = .Grouped) -> UITableView {
+        var tableView = tableView
+        
+        if tableView == nil {
+            tableView = UITableView(frame: view.bounds, style: style)
+            tableView?.autoresizingMask = UIViewAutoresizing.FlexibleWidth.union(.FlexibleHeight)
+            tableView?.cellLayoutMarginsFollowReadableWidth = false
+        }
+        if tableView?.superview == nil && view != tableView {
+            view.addSubview(tableView!)
+        }
+        if tableView?.delegate == nil {
+            tableView?.delegate = (self as! UITableViewDelegate)
+        }
+        if tableView?.dataSource == nil {
+            tableView?.dataSource = (self as! UITableViewDataSource)
+        }
+        
+        tableView?.reloadData()
+        
+        return tableView!
+    }
 }

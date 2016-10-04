@@ -1,6 +1,6 @@
 PODS:
   - Nimble (4.1.0)
-  - Placemat (0.2.1)
+  - Placemat (0.3.0)
   - Quick (0.9.3)
 
 DEPENDENCIES:
@@ -14,9 +14,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
-  Placemat: 141023a88979bb8c589800120b729471a8cffcef
+  Placemat: 55404c9af80dd77d11ff7576fe0bcee0eca25952
   Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
 
 PODFILE CHECKSUM: 38b048e41d99e3e558bd60ff3e086f08c065d78c
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1
