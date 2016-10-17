@@ -1,5 +1,8 @@
 import UIKit
 
+/**
+ Helper class to navigate between view controllers.
+ */
 public class Navigation {
     var currentViewController: UIViewController
     var animated: Bool
@@ -9,6 +12,12 @@ public class Navigation {
         self.animated = animated
     }
     
+    /**
+     Navigate to another controller.
+     
+     optional:
+     - **modally** - Defaults to false. If set to true, will embed the controller into a UINavigationController, and present that outside of the current navigation stack.
+     */
     public func show(target: UIViewController, modally: Bool = false) {
         if modally {
             let nav = UINavigationController(rootViewController: target)
@@ -33,6 +42,9 @@ public class Navigation {
         }
     }
 
+    /**
+     Dismisses the view controller. Automatically determines how the controller should be dismissed appropriately (e.g. if it's shown modally or not)
+     */
     public func dismiss() {
         if let navigation = currentViewController.navigationController {
             if navigation.viewControllers.count == 1 {
