@@ -1,12 +1,16 @@
 import UIKit
 
+enum NavigationError: ErrorType {
+    case WindowAlreadyExists
+}
+
 /**
  Helper class to navigate between view controllers.
  */
 public class Navigation {
     var currentViewController: UIViewController
     var animated: Bool
-    
+
     public init(viewController: UIViewController, animated: Bool = true) {
         currentViewController = viewController
         self.animated = animated
@@ -55,5 +59,22 @@ public class Navigation {
         } else {
             currentViewController.dismissViewControllerAnimated(animated, completion: nil)
         }
+    }
+    
+    /**
+     Used to setup a UIWindow containing the view controller.
+     
+     Normally this should be used within `application:didFinishLaunchingWithOptions:`.
+     
+     Make sure you keep a strong reference of the window.
+     */
+    public func setupWindow() throws -> UIWindow {
+        guard currentViewController.view.window == nil else { throw NavigationError.WindowAlreadyExists }
+        
+        let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window.rootViewController = currentViewController
+        window.makeKeyAndVisible()
+        
+        return window
     }
 }
