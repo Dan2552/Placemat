@@ -6,8 +6,8 @@ target 'Placemat_Example' do
   target 'Placemat_Tests' do
     inherit! :search_paths
 
-    pod 'Nimble'
-    pod 'Quick'
+    pod 'Nimble', '5.1.0'
+    pod 'Quick', '0.10.0'
   end
 end
 
