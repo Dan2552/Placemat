@@ -1,11 +1,3 @@
-//
-//  UIViewController.swift
-//  Pods
-//
-//  Created by Daniel Inkpen on 23/07/2015.
-//
-//
-
 import Foundation
 
 public extension UIViewController {

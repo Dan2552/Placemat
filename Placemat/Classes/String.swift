@@ -1,11 +1,3 @@
-//
-//  StringConverters.swift
-//  Pods
-//
-//  Created by Daniel Inkpen on 06/06/2015.
-//
-//
-
 import UIKit
 private let acronyms = [
     "URL",

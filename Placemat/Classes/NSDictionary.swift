@@ -1,11 +1,3 @@
-//
-//  DictionaryFilter.swift
-//  Pods
-//
-//  Created by Daniel Inkpen on 09/06/2015.
-//
-//
-
 import Foundation
 
 public extension NSDictionary {
