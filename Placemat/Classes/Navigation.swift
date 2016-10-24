@@ -1,6 +1,6 @@
 import UIKit
 
-enum NavigationError: ErrorType {
+enum NavigationError: Error {
     case WindowAlreadyExists
 }
 
@@ -27,21 +27,21 @@ public class Navigation {
             let nav = UINavigationController(rootViewController: target)
             
             let dismissCompletion: (() -> Void) = {
-                target.navigationItem.leftBarButtonItem = BlockBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel) {
+                target.navigationItem.leftBarButtonItem = BlockBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel) {
                     Navigation(viewController: target).dismiss()
                 }
             }
             
-            currentViewController.presentViewController(nav,
-                                                        animated: animated,
-                                                        completion: dismissCompletion)
+            currentViewController.present(nav,
+                                          animated: animated,
+                                          completion: dismissCompletion)
         } else {
             if let navigation = currentViewController.navigationController {
                 navigation.pushViewController(target, animated: animated)
             } else {
-                currentViewController.presentViewController(target,
-                                                            animated: animated,
-                                                            completion: nil)
+                currentViewController.present(target,
+                                              animated: animated,
+                                              completion: nil)
             }
         }
     }
@@ -52,12 +52,12 @@ public class Navigation {
     public func dismiss() {
         if let navigation = currentViewController.navigationController {
             if navigation.viewControllers.count == 1 {
-                currentViewController.dismissViewControllerAnimated(animated, completion: nil)
+                currentViewController.dismiss(animated: animated, completion: nil)
             }
-            navigation.popViewControllerAnimated(animated)
+            navigation.popViewController(animated: animated)
             
         } else {
-            currentViewController.dismissViewControllerAnimated(animated, completion: nil)
+            currentViewController.dismiss(animated: animated, completion: nil)
         }
     }
     
@@ -71,7 +71,7 @@ public class Navigation {
     public func setupWindow() throws -> UIWindow {
         guard currentViewController.view.window == nil else { throw NavigationError.WindowAlreadyExists }
         
-        let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = currentViewController
         window.makeKeyAndVisible()
         

@@ -23,12 +23,12 @@ public extension UIViewController {
             || tabBar
     }
     
-    public func setupTableView(tableView: UITableView? = nil, style: UITableViewStyle = .Grouped) -> UITableView {
+    public func setupTableView(tableView: UITableView? = nil, style: UITableViewStyle = .grouped) -> UITableView {
         var tableView = tableView
         
         if tableView == nil {
             tableView = UITableView(frame: view.bounds, style: style)
-            tableView?.autoresizingMask = UIViewAutoresizing.FlexibleWidth.union(.FlexibleHeight)
+            tableView?.autoresizingMask = UIViewAutoresizing.flexibleWidth.union(.flexibleHeight)
             tableView?.cellLayoutMarginsFollowReadableWidth = false
         }
         if tableView?.superview == nil && view != tableView {
