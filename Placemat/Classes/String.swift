@@ -19,9 +19,7 @@ public extension String {
     
     func changingCaseOf(firstCharacter: FirstCharacterCase) -> String {
         guard self.characters.count > 0 else { return self }
-        
-        
-        
+
         let rest = characters.index(after: startIndex)..<endIndex
         if firstCharacter == .lower {
             return self[startIndex...startIndex].lowercased() + self[rest]

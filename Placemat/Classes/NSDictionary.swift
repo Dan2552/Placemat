@@ -1,7 +1,6 @@
 import Foundation
 
 public extension NSDictionary {
-
     func only(keys: [String]) -> NSDictionary {
         let newDict = NSMutableDictionary()
         for (keyObject, value) in self {
@@ -35,5 +34,4 @@ public extension NSDictionary {
 
         return attributesUnderscore
     }
-
 }
