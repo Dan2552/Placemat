@@ -14,9 +14,9 @@ public enum FirstCharacterCase {
 
 public extension String {
     static func nameFor(object: Any) -> String {
-        return (object is Any.Type) ? "\(object)" : "\(type(of: object))"
+        return "\(object)".components(separatedBy: " ").first!
     }
-    
+
     func changingCaseOf(firstCharacter: FirstCharacterCase) -> String {
         guard self.characters.count > 0 else { return self }
 
@@ -27,7 +27,7 @@ public extension String {
             return self[startIndex...startIndex].uppercased() + self[rest]
         }
     }
-    
+
     func camelCased(firstCharacterCase: FirstCharacterCase = .upper) -> String {
         let range = rangeOfCharacter(from: NSCharacterSet.uppercaseLetters)
         let hasNoCapitals = range?.isEmpty
@@ -35,10 +35,10 @@ public extension String {
         if hasNoCapitals == true || hasNoCapitals == nil {
             result = self.capitalized
         }
-        
+
         return result.changingCaseOf(firstCharacter: firstCharacterCase).replacingOccurrences(of: "_", with: "")
     }
-    
+
     func pluralize() -> String {
         if hasSuffix("s") {
             if !hasSuffix("ss") { return self }
@@ -56,20 +56,20 @@ public extension String {
         }
         return plural
     }
-    
+
     func underscoreCased() -> String {
         let output = NSMutableString()
         let uppercase = NSCharacterSet.uppercaseLetters as NSCharacterSet
         var previousCharacterWasUppercase = false
         var currentCharacterIsUppercase = false
-        
+
         for (index, character) in self.characters.enumerated() {
             let units = [unichar](String(character).utf16)
-            
+
             previousCharacterWasUppercase = currentCharacterIsUppercase
-            
+
             currentCharacterIsUppercase = uppercase.characterIsMember(units[0])
-            
+
             if !previousCharacterWasUppercase && currentCharacterIsUppercase && index > 0 {
                 output.append("_")
             } else if previousCharacterWasUppercase && !currentCharacterIsUppercase {
@@ -80,53 +80,53 @@ public extension String {
                     }
                 }
             }
-            
+
             output.append(String(character).lowercased())
         }
         return String(output)
     }
-    
+
     public func humanize(firstCharacterCase: FirstCharacterCase = .upper) -> String {
         var human = self.underscoreCased()
         human = human.replacingOccurrences(of: "_", with: " ")
         human = human.lowercased()
-        
+
         let words = human.components(separatedBy: " ")
-        
+
         for (index, var word) in words.enumerated() {
             let upper = word.uppercased()
             if acronyms.contains(upper) {
                 word = upper
             }
-            
+
             if index == 0 {
                 human = word
             } else {
                 human += " \(word)"
             }
         }
-        
+
         return human.changingCaseOf(firstCharacter: firstCharacterCase)
     }
-    
+
     public func titleize() -> String {
         var string = underscoreCased().humanize().capitalized
-        
+
         let words = string.components(separatedBy: " ")
-        
+
         for (index, var word) in words.enumerated() {
             let upper = word.uppercased()
             if acronyms.contains(upper) {
                 word = upper
             }
-            
+
             if index == 0 {
                 string = word
             } else {
                 string += " \(word)"
             }
         }
-        
+
         return string
     }
 }
