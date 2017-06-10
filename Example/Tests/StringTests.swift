@@ -10,6 +10,11 @@ class StringConvertersSpec: QuickSpec {
                 expect(String.nameFor(object: AnotherTest())).to(equal("AnotherTest"))
                 expect(String.nameFor(object: ThisIsATest.self)).to(equal("ThisIsATest"))
                 expect(String.nameFor(object: AnotherTest.self)).to(equal("AnotherTest"))
+                
+                var optionalTest: ThisIsATest? = ThisIsATest()
+                expect(String.nameFor(object: optionalTest)).to(equal("ThisIsATest"))
+                optionalTest = nil
+                expect(String.nameFor(object: optionalTest)).to(equal("nil"))
             }
         }
         

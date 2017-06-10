@@ -13,8 +13,13 @@ public enum FirstCharacterCase {
 }
 
 public extension String {
-    static func nameFor(object: Any) -> String {
-        return "\(object)".components(separatedBy: " ").first!.components(separatedBy: ".").last!
+    static func nameFor(object: Any?) -> String {
+        if let object = object {
+//        return "\(object)" //.components(separatedBy: " ").first!.components(separatedBy: ".").last!
+        return (object is Any.Type) ? "\(object)" : "\(type(of: object))"
+        } else {
+            return "nil"
+        }
     }
 
     func changingCaseOf(firstCharacter: FirstCharacterCase) -> String {
