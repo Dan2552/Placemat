@@ -4,17 +4,12 @@ import Placemat
 
 class StringConvertersSpec: QuickSpec {
     override func spec() {
-        describe("+instanceClassName:") {
+        describe("nameFor(object:)") {
             it("returns the name of the class for a given instance or class") {
                 expect(String.nameFor(object: ThisIsATest())).to(equal("ThisIsATest"))
                 expect(String.nameFor(object: AnotherTest())).to(equal("AnotherTest"))
                 expect(String.nameFor(object: ThisIsATest.self)).to(equal("ThisIsATest"))
                 expect(String.nameFor(object: AnotherTest.self)).to(equal("AnotherTest"))
-            }
-        }
-        
-        describe("+className:") {
-            it("returns the name of the given class") {
             }
         }
         

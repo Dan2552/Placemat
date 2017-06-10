@@ -14,7 +14,7 @@ public enum FirstCharacterCase {
 
 public extension String {
     static func nameFor(object: Any) -> String {
-        return "\(object)".components(separatedBy: " ").first!
+        return "\(object)".components(separatedBy: " ").first!.components(separatedBy: ".").last!
     }
 
     func changingCaseOf(firstCharacter: FirstCharacterCase) -> String {

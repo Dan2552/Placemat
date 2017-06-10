@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Placemat"
-  s.version          = "0.6.0"
+  s.version          = "0.7.0"
   s.summary          = "Dependency of Luncheon. Support library."
   s.homepage         = "https://github.com/Dan2552/Placemat"
   s.license          = 'MIT'
